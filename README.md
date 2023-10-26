@@ -22,7 +22,7 @@ Build, package and run application in IDE, such as Intellij
 
 Or
 
-Package and run application via command line if maven installed
+Package and run application via command line if independent maven installed
 
 `mvn package`
 
@@ -30,9 +30,9 @@ Package and run application via command line if maven installed
 
 Or 
 
-Package and run admin-0.0.1-SNAPSHOT.jar in docker compose
+Package and run application (admin-0.0.1-SNAPSHOT.jar) in docker compose if docker installed and started
 
-Package via command line `mvn package` if maven installed or via IDE 
+Package application via IDE or via command line `mvn package` if independent maven installed, then execute following commands: 
 
 `docker-compose down`
 
