@@ -1,0 +1,27 @@
+version: '3.5'
+
+services:
+  postgres:
+    image: postgres
+    environment:
+      POSTGRES_USER: compose-postgres
+      POSTGRES_PASSWORD: compose-postgres
+      PGDATA: /data/postgres
+    ports:
+      - '5433:5432'
+
+  admin-api:
+    image: 'docker-spring-boot-postgres:latest'
+    build:
+      context: .
+    depends_on:
+      - postgres
+    environment:
+      DB_HOST: postgres
+      DB_PORT: 5432
+      DB_USERNAME: compose-postgres
+      DB_PASSWORD: compose-postgres
+      APP_ENV: local
+    ports:
+      - "8080:8080"
+

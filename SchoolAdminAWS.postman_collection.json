@@ -1,0 +1,201 @@
+{
+	"info": {
+		"_postman_id": "5ac87009-cf71-4c7a-af40-6c0c197fdb65",
+		"name": "SchoolAdminAWS",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "17381623",
+		"_collection_link": "https://apresttesting.postman.co/workspace/SpringBootLearning~0405f93c-b387-470e-809f-31f2bc52fb2f/collection/17381623-5ac87009-cf71-4c7a-af40-6c0c197fdb65?action=share&creator=17381623&source=collection_link"
+	},
+	"item": [
+		{
+			"name": "registerStudent",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"teacher\": \"teacher3@gmail.com\",\r\n  \"students\":\r\n    [\r\n      \"student1@gmail.com\",\r\n      \"student2@gmail.com\",\r\n      \"student3@gmail.com\"\r\n    ]\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://ec2-13-229-91-43.ap-southeast-1.compute.amazonaws.com:8080/api/register",
+					"protocol": "http",
+					"host": [
+						"ec2-13-229-91-43",
+						"ap-southeast-1",
+						"compute",
+						"amazonaws",
+						"com"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "deRegisterStudent",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"teacher\": \"teacher5@gmail.com\",\r\n  \"student\": \"student9@gmail.com\", \r\n  \"reason\": \"Cancelled enrollment\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://ec2-13-229-91-43.ap-southeast-1.compute.amazonaws.com:8080/api/deregister",
+					"protocol": "http",
+					"host": [
+						"ec2-13-229-91-43",
+						"ap-southeast-1",
+						"compute",
+						"amazonaws",
+						"com"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"deregister"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "addStudent",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\":\"student9@gmail.com\",\r\n    \"name\":\"Nine\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://ec2-13-229-91-43.ap-southeast-1.compute.amazonaws.com:8080/api/students",
+					"protocol": "http",
+					"host": [
+						"ec2-13-229-91-43",
+						"ap-southeast-1",
+						"compute",
+						"amazonaws",
+						"com"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"students"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "addTeacher",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\":\"teacher1@gmail.com\",\r\n    \"name\":\"One\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://ec2-13-229-91-43.ap-southeast-1.compute.amazonaws.com:8080/api/teachers",
+					"protocol": "http",
+					"host": [
+						"ec2-13-229-91-43",
+						"ap-southeast-1",
+						"compute",
+						"amazonaws",
+						"com"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"teachers"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "retrieveCommonStudents",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://ec2-13-229-91-43.ap-southeast-1.compute.amazonaws.com:8080/api/commonstudents?teacher=teacher5%40gmail.com&teacher=teacher3%40gmail.com",
+					"protocol": "http",
+					"host": [
+						"ec2-13-229-91-43",
+						"ap-southeast-1",
+						"compute",
+						"amazonaws",
+						"com"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"commonstudents"
+					],
+					"query": [
+						{
+							"key": "teacher",
+							"value": "teacher5%40gmail.com"
+						},
+						{
+							"key": "teacher",
+							"value": "teacher3%40gmail.com"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "retrieveAllTeachers",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://ec2-13-229-91-43.ap-southeast-1.compute.amazonaws.com:8080/api/teachers",
+					"protocol": "http",
+					"host": [
+						"ec2-13-229-91-43",
+						"ap-southeast-1",
+						"compute",
+						"amazonaws",
+						"com"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"teachers"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
