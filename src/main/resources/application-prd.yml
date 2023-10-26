@@ -1,8 +1,8 @@
 spring:
   datasource:
-    url: jdbc:postgresql://ec2-13-229-91-43.ap-southeast-1.compute.amazonaws.com:5432/postgres
-    username: postgres
-    password: postgres
+    url: jdbc:postgresql://[db_host]:5432/postgres
+    username: [db_username]
+    password: [db_password]
   jpa:
     hibernate:
       ddl-auto: update
